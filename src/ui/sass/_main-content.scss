@@ -3,35 +3,66 @@
 
     .home & {
         align-items: center;
+
+        .astro {
+            display: block;
+            position: absolute;
+            top: 45%;
+            left: 25%;
+
+            img {
+                display: inline-block;
+                position: relative;
+                width: 250px;
+                transition: .5s ease;
+                animation: astro 2.5s infinite ease-in-out;
+            }
+
+            &:after {
+                background: darken($white, 10%);
+                border-radius: 50%;
+                content: '';
+                display: block;
+                width: 100px;
+                height: 18px;
+                position: absolute;
+                bottom: -75px;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: astro-shadow 2.5s infinite ease-in-out;
+            }
+        }
     }
-}
 
-.astro {
-    display: block;
-    position: absolute;
-    top: 45%;
-    left: 25%;
+    .art & {
+        .astro {
+            display: block;
+            position: absolute;
+            top: 45%;
+            right: 15%;
 
-    img {
-        display: inline-block;
-        position: relative;
-        width: 250px;
-        transition: .5s ease;
-        animation: astro 2.5s infinite ease-in-out;
-    }
+            img {
+                display: inline-block;
+                position: relative;
+                width: 250px;
+                transition: .5s ease;
+                animation: astro 2.5s infinite ease-in-out;
+            }
 
-    &:after {
-        background: darken($white, 10%);
-        border-radius: 50%;
-        content: '';
-        display: block;
-        width: 100px;
-        height: 18px;
-        position: absolute;
-        bottom: -75px;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: astro-shadow 2.5s infinite ease-in-out;
+            &:after {
+                background: darken($white, 10%);
+                border-radius: 50%;
+                content: '';
+                display: block;
+                width: 60px;
+                height: 12px;
+                position: absolute;
+                bottom: -75px;
+                left: 75%;
+                transform: translateX(-50%);
+                animation: astro-shadow-2 2.5s infinite ease-in-out;
+            }
+        }
     }
 }
 
@@ -45,4 +76,10 @@
     0% {width: 125px; height: 22px; background: darken($white, 5%);}
     50% {width: 100px; height: 18px; background: darken($white, 10%);}
     100% {width: 125px; height: 22px; background: darken($white, 5%);}
+}
+
+@keyframes astro-shadow-2 {
+    0% {width: 75px; height: 15px; background: darken($white, 5%);}
+    50% {width: 60px; height: 12px; background: darken($white, 10%);}
+    100% {width: 75px; height: 15px; background: darken($white, 5%);}
 }

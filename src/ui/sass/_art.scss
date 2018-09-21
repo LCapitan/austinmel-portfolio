@@ -1,0 +1,21 @@
+.art {
+    text-align: center;
+
+    h1 {
+        color: darken($white, 3%);
+        font-family: $font-title;
+        font-size: 28em;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    @media #{$mobile} {
+    }
+}

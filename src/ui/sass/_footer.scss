@@ -16,7 +16,7 @@ footer {
         top: 90%;
         transform: translateX(-50%);
         transition: .75s ease;
-        z-index: 9999;
+        z-index: 700;
 
         &:before {
             filter: grayscale(100%);
@@ -28,15 +28,17 @@ footer {
 
         &:after {
             background: $blue;
-            border-radius: 50%;
+            border-radius: 4px 4px 50% 50%;
             content: '';
             display: block;
             width: 10px;
-            height: 10px;
+            height: 20px;
+            opacity: .5;
             position: relative;
-            top: -20px;
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
+            transition: .5s ease;
             z-index: -1;
         }
 
@@ -51,7 +53,8 @@ footer {
             }
 
             &:after {
-                animation: 1s ease smoke infinite;
+                top: -20px;
+                transition: .5s ease;
             }
         }
     }
@@ -65,12 +68,12 @@ footer {
         top: 110%;
         left: 50%;
         transform: translateX(-50%);
-        transition: 2s ease;
+        transition: 1s ease;
         z-index: 999;
 
         &:hover,
         &:focus {
-            cursor: crosshair;
+            cursor: url('../img/cursor-x.png'), auto;
         }
     }
 
@@ -83,9 +86,10 @@ footer {
                 display: none;
             }
         }
+
         .navBg {
-            width: 300%;
-            height: 500%;
+            width: 3000px;
+            height: 3000px;
             top: -150%;
             transition: 2s ease;
         }
@@ -98,9 +102,4 @@ footer {
             transition-timing-function: ease;
         }
     }
-}
-
-@keyframes smoke {
-    0% {top: -20px; width: 10px; height: 10px;}
-    100% {top: 50px; width: 50px; height: 50px;}
 }

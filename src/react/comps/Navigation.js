@@ -5,9 +5,8 @@ class Navigation extends Component {
         return (
             <nav>
                 <ul>
-                    <li><a href="/draw">draw</a></li>
-                    <li><a href="/design">design</a></li>
-                    <li><a href="/develop">develop</a></li>
+                    <li><a href="/draw">art</a></li>
+                    <li><a href="/develop">code</a></li>
                 </ul>
             </nav>
         );

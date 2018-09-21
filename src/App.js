@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from "./react/pages/Home";
 import Draw from "./react/pages/Draw";
-import Design from "./react/pages/Design";
 import Develop from "./react/pages/Develop";
 import Profile from "./react/pages/Profile";
 
@@ -13,7 +12,6 @@ class App extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route path="/draw" component={Draw}/>
-                        <Route path="/design" component={Design}/>
                         <Route path="/develop" component={Develop}/>
                         <Route path="/profile" component={Profile}/>
                         <Route exact path="/" component={Home}/>

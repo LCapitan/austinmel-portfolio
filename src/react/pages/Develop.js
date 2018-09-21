@@ -8,7 +8,7 @@ class Develop extends Component {
             <div className="home grid">
                 <Header/>
                 <div className="main-content">
-                    <h1>develop</h1>
+                    <h1>code</h1>
                 </div>
                 <Footer/>
             </div>

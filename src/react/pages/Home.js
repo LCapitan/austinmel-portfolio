@@ -6,7 +6,7 @@ import Footer from '../comps/Footer';
 class Home extends Component {
     render() {
         return (
-            <div className="home grid">
+            <div className="home default grid">
                 <Header/>
                 <div className="main-content">
                     <h1>austin</h1>

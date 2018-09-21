@@ -5,7 +5,7 @@ import Footer from '../comps/Footer';
 class Develop extends Component {
     render() {
         return (
-            <div className="home grid">
+            <div className="home default grid">
                 <Header/>
                 <div className="main-content">
                     <h1>code</h1>

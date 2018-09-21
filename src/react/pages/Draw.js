@@ -6,7 +6,7 @@ import Footer from '../comps/Footer';
 class Draw extends Component {
     render() {
         return (
-            <div className="art grid">
+            <div className="art default grid">
                 <Header/>
                 <div className="main-content">
                     <h1>art</h1>

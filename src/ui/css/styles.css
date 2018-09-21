@@ -25,12 +25,12 @@ a {
   .grid .main-content {
     display: grid;
     grid-column: 1/14; }
-  .grid.home, .grid.art {
+  .grid.home, .grid.art, .grid.about {
     grid-template-rows: 10vh 80vh 10vh; }
 
-.home {
+.default {
   text-align: center; }
-  .home h1 {
+  .default h1 {
     color: #f7f7f7;
     font-family: "Noto Serif", serif;
     font-size: 28em;
@@ -279,7 +279,7 @@ nav {
     .art .main-content .astro img {
       display: inline-block;
       position: relative;
-      width: 250px;
+      width: 350px;
       transition: .5s ease;
       animation: astro 2.5s infinite ease-in-out; }
     .art .main-content .astro:after {
@@ -294,6 +294,17 @@ nav {
       left: 75%;
       transform: translateX(-50%);
       animation: astro-shadow-2 2.5s infinite ease-in-out; }
+  .about .main-content .balloon {
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: 10%; }
+    .about .main-content .balloon img {
+      display: inline-block;
+      position: relative;
+      width: 350px;
+      transition: .5s ease;
+      animation: astro 2.5s infinite ease-in-out; }
 
 @keyframes astro {
   0% {

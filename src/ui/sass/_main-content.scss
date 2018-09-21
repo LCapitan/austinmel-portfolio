@@ -1,0 +1,48 @@
+.main-content {
+    position: relative;
+
+    .home & {
+        align-items: center;
+    }
+}
+
+.astro {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+
+    img {
+        display: inline-block;
+        position: relative;
+        width: 250px;
+        transition: .5s ease;
+        animation: astro 2.5s infinite ease-in-out;
+    }
+
+    &:after {
+        background: darken($white, 10%);
+        border-radius: 50%;
+        content: '';
+        display: block;
+        width: 100px;
+        height: 18px;
+        position: absolute;
+        bottom: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: astro-shadow 2.5s infinite ease-in-out;
+    }
+}
+
+@keyframes astro {
+    0% {top: -18px}
+    50% {top: 0}
+    100% {top: -18px}
+}
+
+@keyframes astro-shadow {
+    0% {width: 125px; height: 22px; background: darken($white, 5%);}
+    50% {width: 100px; height: 18px; background: darken($white, 10%);}
+    100% {width: 125px; height: 22px; background: darken($white, 5%);}
+}

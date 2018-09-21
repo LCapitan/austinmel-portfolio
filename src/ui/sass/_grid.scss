@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto;
+    height: 100vh;
+
+    .main-content {
+        display: grid;
+        grid-column: 1/14;
+    }
+
+    &.home {
+        grid-template-rows: 10vh 80vh 10vh;
+    }
+}

@@ -1,0 +1,106 @@
+footer {
+    display: grid;
+    grid-column: 1/14;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .navBtn {
+        background: none;
+        border: 0;
+        border-radius: 50%;
+        color: $gray;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        transform: translateX(-50%);
+        transition: .75s ease;
+        z-index: 9999;
+
+        &:before {
+            filter: grayscale(100%);
+            width: 50px;
+            height: 50px;
+            transition: 1s ease;
+            z-index: 999;
+        }
+
+        &:after {
+            background: $blue;
+            border-radius: 50%;
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: relative;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: none;
+
+            &:before {
+                transform: rotate(-45deg);
+                transition: .25s ease;
+            }
+
+            &:after {
+                animation: 1s ease smoke infinite;
+            }
+        }
+    }
+
+    .navBg {
+        background: $blue;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 2s ease;
+        z-index: 999;
+
+        &:hover,
+        &:focus {
+            cursor: crosshair;
+        }
+    }
+
+    &.navBgOpen {
+        .navBtn {
+            top: -100px;
+            transition: .75s ease-out;
+
+            &:after {
+                display: none;
+            }
+        }
+        .navBg {
+            width: 300%;
+            height: 500%;
+            top: -150%;
+            transition: 2s ease;
+        }
+
+        nav {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: .75s;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+    }
+}
+
+@keyframes smoke {
+    0% {top: -20px; width: 10px; height: 10px;}
+    100% {top: 50px; width: 50px; height: 50px;}
+}

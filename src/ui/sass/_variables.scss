@@ -1,0 +1,37 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:700|Open+Sans:400,600,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$font-title: 'Noto Serif', serif;
+$font-copy: 'Open Sans', sans-serif;
+
+
+// Colors
+
+$black: #000;
+$white: #fff;
+$gray: #858585;
+$blue: #2ba3df;
+$pink: #ff376f;
+$green: #00ed83;
+
+
+// Icons
+.icon-rocket {
+    &:before {
+        content: url('../img/rocket.svg');
+        display: inline-block;
+    }
+}
+
+.icon-astro {
+    &:before {
+        content: url('../img/about.svg');
+        display: inline-block;
+    }
+}
+
+
+// Mixins
+
+$mobile: "(max-width: 767px)";

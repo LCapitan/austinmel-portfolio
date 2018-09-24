@@ -39,21 +39,42 @@
         }
     }
 
+    @media screen and (max-width: 992px) {
+        .main-content {
+            h1 {
+                font-size: 160px;
+                top: 150px;
+            }
+        }
+    }
+
     @media screen and (max-width: 767px) {
         display: block;
 
-        .main-content {
+        .logo-m {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
 
-            h1 { font-size: 120px; }
+            svg { fill: darken($white, 5%); }
+        }
+
+        .main-content {
+            overflow: hidden;
+
+            h1 {
+                font-size: 120px;
+                top: 100px;
+            }
 
             .astro {
-                top: 35%;
+                top: 45%;
                 left: 50%;
                 margin-left: -100px;
 
-                img {
-                    width: 200px;
-                }
+                img { width: 200px; }
             }
         }
     }

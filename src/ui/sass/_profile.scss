@@ -9,9 +9,8 @@
             .st0 { fill: lighten($light-gray, 20%); }
             .st1 { fill: $blue; }
             .st2 { fill: $white; }
-            svg {
-                opacity: 1;
-            }
+
+            svg { opacity: 1; }
         }
     }
 
@@ -23,20 +22,47 @@
 
         .content {
             grid-column: 2/9;
+            grid-row: 1;
         }
 
         .balloon {
             display: block;
+            grid-column: 9/13;
+            grid-row: 1;
             position: absolute;
             top: 15%;
             right: 10%;
+            width: 100%;
 
             img {
                 display: inline-block;
                 position: relative;
-                width: 350px;
+                width: 100%;
                 transition: .5s ease;
                 animation: astro 2.5s infinite ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        overflow-y: visible;
+        display: block;
+
+        .main-content {
+            display: block;
+
+            .content { display: block; }
+
+            .balloon {
+                height: 300px;
+                text-align: right;
+                overflow: hidden;
+                position: relative;
+                top: 50px;
+                right: 20%;
+                z-index: -1;
+
+                img { width: 300px; }
             }
         }
     }
@@ -61,14 +87,13 @@
             .balloon {
                 height: 300px;
                 text-align: right;
+                overflow: hidden;
                 position: relative;
                 top: 50px;
                 right: 0;
                 z-index: -1;
 
-                img {
-                    width: 200px;
-                }
+                img { width: 250px; }
             }
         }
 

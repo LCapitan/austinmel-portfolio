@@ -112,7 +112,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 992px) {
         background: #333;
         display: block;
         height: auto;
@@ -120,6 +120,13 @@ header {
         position: fixed;
         bottom: 0;
         width: 100%;
+
+        ul {
+            li {
+                &:first-child { text-align: center; }
+                &:last-child { text-align: center; }
+            }
+        }
 
         .logo, .profile {
             a {
@@ -145,6 +152,15 @@ header {
         .logo {
             svg {
                 fill: $white;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        ul {
+            li {
+                &:first-child { text-align: left; }
+                &:last-child { text-align: right; }
             }
         }
     }

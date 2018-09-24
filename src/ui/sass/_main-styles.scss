@@ -3,12 +3,14 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 992px) {
         overflow-y: visible;
     }
 }
+
+.menu-open { overflow: hidden; }
 
 a {
     color: $pink;
@@ -16,9 +18,7 @@ a {
     text-decoration: none;
 
     &:hover,
-    &:focus {
-        color: darken($pink, 15%);
-    }
+    &:focus { color: darken($pink, 15%); }
 }
 
 p {
@@ -30,13 +30,21 @@ p {
     padding: 10px 0;
 }
 
+.mobile {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+}
+
 // Default Layout
 
 .default {
     text-align: center;
 
     h1 {
-        color: darken($white, 3%);
+        color: darken($white, 5%);
         font-family: $font-title;
         font-size: 28em;
         font-weight: 700;
@@ -48,6 +56,11 @@ p {
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: -1;
+
+        @media screen and (max-width: 992px) {
+            font-size: 180px;
+            top: 50px;
+        }
 
         @media screen and (max-width: 767px) {
             font-size: 130px;
@@ -70,8 +83,17 @@ p {
     .content {
         text-align: left;
 
-        h2 {
-            color: $dark-gray;
+        h2 { color: $dark-gray; }
+
+        .author {
+            text-align: right;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+
+        .content {
+            padding: 0 25px;
         }
     }
 

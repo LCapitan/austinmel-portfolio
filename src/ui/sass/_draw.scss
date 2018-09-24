@@ -1,31 +1,72 @@
 .draw {
+    display: grid;
     text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr auto;
+    overflow-y: visible;
 
     .main-content {
-        .astro-play {
-            display: block;
-            position: absolute;
-            top: 45%;
-            right: 15%;
+        position: relative;
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: auto;
+
+        h1 {
+            left: 40%;
+        }
+
+        .content {
+            grid-column: 2/8;
+            grid-row: 1;
+        }
+
+        .carousel {
+            grid-column: 9/14;
+            grid-row: 1;
+            margin-top: 100px;
+            position: relative;
+            width: 100%;
 
             img {
-                &:first-child {
-                    display: inline-block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 500px;
-                    transition: .5s ease;
-                    animation: astro 2.5s infinite ease-in-out;
-                }
+                position: relative;
+                width: 100%;
+            }
 
-                &:last-child {
-                    display: inline-block;
-                    position: absolute;
-                    width: 300px;
-                    transition: .5s ease;
-                    animation: astro 2.5s infinite ease-in-out;
+            .slick-prev {
+                left: 0;
+                z-index: 999;
+
+                &:before {
+                    font-size: 50px;
                 }
+            }
+
+            .slick-next {
+                right: 30px;
+                z-index: 999;
+
+                &:before {
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .octo {
+            display: none;
+            grid-column: 10/13;
+            grid-row: 1/2;
+            position: relative;
+            top: 250px;
+
+            img {
+                display: inline-block;
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transition: .5s ease;
+                animation: octo 2.5s infinite ease-in-out;
             }
 
             &:after {
@@ -37,10 +78,90 @@
                 height: 12px;
                 position: absolute;
                 bottom: -75px;
-                left: 75%;
+                left: 65%;
                 transform: translateX(-50%);
-                animation: astro-shadow-2 2.5s infinite ease-in-out;
+                animation: octo-shadow 2.5s infinite ease-in-out;
             }
         }
     }
+
+    @media screen and (max-width: 992px) {
+        display: block;
+
+        .main-content {
+            display: block;
+
+            .octo {
+                display: block;
+                top: 85px;
+                height: 300px;
+
+                img {
+                    width: 250px;
+                    right: -150px;
+                    left: auto;
+                }
+
+                &:after {
+                    bottom: 30px;
+                    left: 75%;
+                }
+            }
+
+            .carousel {
+                margin-top: 25px;
+                margin-bottom: 50px;
+                position: relative;
+                width: 100%;
+
+                img {
+                    position: relative;
+                    width: 100%;
+                }
+
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        display: block;
+
+        .main-content {
+            display: block;
+
+            .octo {
+                display: block;
+                top: 85px;
+                height: 300px;
+
+                img {
+                    width: 250px;
+                    right: -50px;
+                    left: auto;
+                }
+
+                &:after {
+                    bottom: 30px;
+                    left: 70%;
+                }
+            }
+
+            .carousel {
+                margin-top: 0;
+                margin-bottom: -8px;
+            }
+        }
+    }
+}
+
+@keyframes octo {
+    0% {top: -18px}
+    50% {top: 0}
+    100% {top: -18px}
+}
+
+@keyframes octo-shadow {
+    0% {width: 125px; height: 22px; background: darken($white, 5%);}
+    50% {width: 100px; height: 18px; background: darken($white, 10%);}
+    100% {width: 125px; height: 22px; background: darken($white, 5%);}
 }

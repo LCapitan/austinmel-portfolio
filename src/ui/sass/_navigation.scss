@@ -1,7 +1,7 @@
 nav {
     opacity: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -25,9 +25,7 @@ nav {
                 width: 100%;
 
                 &:hover,
-                &:focus {
-                    color: $white;
-                }
+                &:focus { color: $white; }
             }
         }
     }

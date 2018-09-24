@@ -1,7 +1,7 @@
 footer {
     display: grid;
-    grid-column: 1/14;
     align-items: center;
+    height: 75px;
     justify-content: center;
     overflow: hidden;
 
@@ -11,9 +11,10 @@ footer {
         border-radius: 50%;
         color: $gray;
         display: block;
+        padding: 0;
         position: absolute;
         left: 50%;
-        top: 90%;
+        bottom: 20px;
         transform: translateX(-50%);
         transition: .75s ease;
         z-index: 700;
@@ -24,6 +25,7 @@ footer {
             height: 50px;
             transition: 1s ease;
             z-index: 999;
+            transform: rotate(45deg);
         }
 
         &:after {
@@ -48,12 +50,12 @@ footer {
             outline: none;
 
             &:before {
-                transform: rotate(-45deg);
+                transform: rotate(0deg);
                 transition: .25s ease;
             }
 
             &:after {
-                top: -20px;
+                top: -15px;
                 transition: .5s ease;
             }
         }
@@ -62,10 +64,10 @@ footer {
     .navBg {
         background: $blue;
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        width: 0px;
+        height: 0px;
         position: absolute;
-        top: 110%;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         transition: 1s ease;
@@ -78,8 +80,10 @@ footer {
     }
 
     &.navBgOpen {
+        overflow: hidden;
+
         .navBtn {
-            top: -100px;
+            bottom: 110%;
             transition: .75s ease-out;
 
             &:after {
@@ -90,7 +94,7 @@ footer {
         .navBg {
             width: 3000px;
             height: 3000px;
-            top: -150%;
+            bottom: -100%;
             transition: 2s ease;
         }
 
@@ -100,6 +104,49 @@ footer {
             transition-delay: .75s;
             transition-duration: 1s;
             transition-timing-function: ease;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        height: 75px;
+        overflow: hidden;
+
+        .navBtn {
+            position: fixed;
+            bottom: 10px;
+            transition: .75s ease-out;
+
+            &:before {
+                width: 45px;
+                transform: rotate(0deg);
+                transition: .75s ease-out;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &.navBgOpen {
+            .navBtn {
+                bottom: 120%;
+                transition: 1s ease;
+            }
+
+            .navBg {
+                width: 2000px;
+                height: 2000px;
+                bottom: -20%;
+                transition: 2s ease;
+            }
+
+            nav {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: .75s;
+                transition-duration: 1s;
+                transition-timing-function: ease;
+            }
         }
     }
 }

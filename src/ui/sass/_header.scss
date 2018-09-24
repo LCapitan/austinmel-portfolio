@@ -1,6 +1,6 @@
 header {
     display: grid;
-    grid-column: 1/14;
+    height: 75px;
     align-items: center;
     z-index: 100;
 
@@ -56,14 +56,14 @@ header {
                 &:after {
                     opacity: 1;
                     transition: .25s ease;
-                    transition-delay: 1s;
+                    transition-delay: .5s;
                 }
             }
         }
 
-        .st0 { fill:#D3D3D3; }
-        .st1 { fill:#969696; }
-        .st2 { fill:#FFFFFF; }
+        .st0 { fill: #D3D3D3; }
+        .st1 { fill: #969696; }
+        .st2 { fill: #FFFFFF; }
     }
 
     .logo {
@@ -96,7 +96,8 @@ header {
                 transition: .5s ease;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 svg {
                     opacity: 1;
                     transition: .25s ease;
@@ -105,8 +106,45 @@ header {
                 &:after {
                     opacity: 1;
                     transition: .25s ease;
-                    transition-delay: 1s;
+                    transition-delay: .5s;
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        background: #333;
+        display: block;
+        height: auto;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
+        .logo, .profile {
+            a {
+                &:hover {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            svg {
+                opacity: 1;
+                width: 50px;
+            }
+        }
+
+        .profile {
+            .st0 { fill: $white; }
+            .st1 { fill: $light-gray; }
+            .st2 { fill: #FFFFFF; }
+        }
+
+        .logo {
+            svg {
+                fill: $white;
             }
         }
     }

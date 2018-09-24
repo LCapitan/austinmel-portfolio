@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import AstroPicture2 from '../../ui/img/astro-game.png';
+import AstroPlay from '../../ui/img/astro-play.png';
+import TvPs4 from '../../ui/img/tv-ps4.png';
 
 const AstroGame = () => {
     return (
-        <div className="astro">
-            <img src={AstroPicture2}/>
+        <div className="astro-play">
+            <img src={TvPs4}/>
+            <img src={AstroPlay}/>
         </div>
     )
 }

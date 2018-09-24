@@ -1,0 +1,83 @@
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    overflow: hidden;
+
+    header {
+        .profile {
+            .st0 { fill: lighten($light-gray, 20%); }
+            .st1 { fill: $blue; }
+            .st2 { fill: $white; }
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+
+    .main-content {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: auto;
+
+        .content {
+            grid-column: 2/9;
+        }
+
+        .balloon {
+            display: block;
+            position: absolute;
+            top: 15%;
+            right: 10%;
+
+            img {
+                display: inline-block;
+                position: relative;
+                width: 350px;
+                transition: .5s ease;
+                animation: astro 2.5s infinite ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        overflow-y: visible;
+        display: block;
+
+        h1 {
+            font-size: 130px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .main-content {
+            display: block;
+
+            .content { display: block; }
+
+            .balloon {
+                height: 300px;
+                text-align: right;
+                position: relative;
+                top: 50px;
+                right: 0;
+                z-index: -1;
+
+                img {
+                    width: 200px;
+                }
+            }
+        }
+
+        header {
+            .profile {
+                .st0 { fill: $white; }
+                .st1 { fill: $blue; }
+                .st2 { fill: $white; }
+            }
+        }
+    }
+}

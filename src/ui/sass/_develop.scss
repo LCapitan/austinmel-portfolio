@@ -1,0 +1,179 @@
+.develop {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+
+    .main-content {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        grid-template-rows: auto;
+
+        .content {
+            grid-column: 2/9;
+        }
+
+        .astro-play {
+            display: block;
+            position: absolute;
+            top: 45%;
+            right: 10%;
+
+            img {
+                &:first-child {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 400px;
+                    transition: .5s ease;
+                    animation: tv-ps4 2.5s infinite ease-in-out;
+                    z-index: 15;
+                }
+
+                &:last-child {
+                    display: inline-block;
+                    position: relative;
+                    top: -50px;
+                    right: 0;
+                    width: 200px;
+                    transition: .5s ease;
+                    animation: astro-play 2.5s infinite ease-in-out;
+                    z-index: 10;
+                }
+            }
+
+            &:after {
+                background: darken($white, 10%);
+                border-radius: 50%;
+                content: '';
+                display: block;
+                width: 80px;
+                height: 12px;
+                position: absolute;
+                top: 300px;
+                left: 75%;
+                transform: translateX(-50%);
+                transform-origin: center;
+                animation: astro-shadow-play 2.5s infinite ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        overflow-y: visible;
+        display: block;
+
+        h1 {
+            font-size: 130px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .main-content {
+            display: block;
+
+            .content { display: block; }
+
+            .astro-play {
+                height: 300px;
+                text-align: right;
+                position: relative;
+                top: 50px;
+                right: 15%;
+                z-index: -1;
+
+                img {
+                    &:first-child {
+                        width: 250px;
+                        animation: tv-ps4-mobile 2.5s infinite ease-in-out;
+                    }
+
+                    &:last-child {
+                        top: 50px;
+                        right: -20px;
+                        width: 150px;
+                        animation: astro-play-mobile 2.5s infinite ease-in-out;
+                    }
+                }
+
+                &:after {
+                    top: 280px;
+                    left: 90%;
+                }
+            }
+        }
+    }
+
+    .dev-apps {
+        margin: 25px 0;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                padding: 5px 0;
+                i {
+                    color: $light-gray;
+
+                    &:before {
+                        font-size: 40px;
+                    }
+
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            ul {
+                grid-template-columns: repeat(5, 1fr);
+
+                li {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@keyframes astro-play {
+    0% {top: -50px}
+    50% {top: -70px}
+    100% {top: -50px}
+}
+
+@keyframes astro-play-mobile {
+    0% {top: 30px}
+    50% {top: 50px}
+    100% {top: 30px}
+}
+
+@keyframes tv-ps4 {
+    0% {top: -15px}
+    50% {top: 0;}
+    100% {top: -15px}
+}
+
+@keyframes tv-ps4-mobile {
+    0% {top: 115px}
+    50% {top: 100px;}
+    100% {top: 115px}
+}
+
+@keyframes astro-shadow-play {
+    0% {width: 80px; height: 18px; background: darken($white, 5%);}
+    50% {width: 60px; height: 12px; background: darken($white, 10%);}
+    100% {width: 80px; height: 18px; background: darken($white, 5%);}
+}

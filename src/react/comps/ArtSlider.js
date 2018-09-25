@@ -8,6 +8,10 @@ import Slide5 from '../../ui/img/art-slides/cellouie.JPG';
 import Slide6 from '../../ui/img/art-slides/calvinhobbes.JPG';
 import Slide7 from '../../ui/img/art-slides/headintheclouds.JPG';
 import Slide8 from '../../ui/img/art-slides/2099.jpg';
+import Slide13 from '../../ui/img/art-slides/20992.jpg';
+import Slide14 from '../../ui/img/art-slides/20993.jpg';
+import Slide15 from '../../ui/img/art-slides/deadpool.jpg';
+import Slide16 from '../../ui/img/art-slides/silversurfer.jpg';
 import Slide9 from '../../ui/img/art-slides/superman.jpeg';
 import Slide10 from '../../ui/img/art-slides/joker.jpeg';
 import Slide11 from '../../ui/img/art-slides/tiger.jpeg';
@@ -22,7 +26,7 @@ class ArtSlider extends Component {
             autoplay: true,
             autoplaySpeed: 4000,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             responsive: [
                 {
                     breakpoint: 767,
@@ -44,7 +48,11 @@ class ArtSlider extends Component {
                     <div><img src={Slide5}/></div>
                     <div><img src={Slide6}/></div>
                     <div><img src={Slide7}/></div>
+                    <div><img src={Slide13}/></div>
+                    <div><img src={Slide14}/></div>
                     <div><img src={Slide8}/></div>
+                    <div><img src={Slide15}/></div>
+                    <div><img src={Slide16}/></div>
                     <div><img src={Slide9}/></div>
                     <div><img src={Slide10}/></div>
                     <div><img src={Slide11}/></div>

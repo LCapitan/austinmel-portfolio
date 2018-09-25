@@ -39,7 +39,7 @@ class Draw extends Component {
                     <ArtSlider/>
                     <div class="content-2">
                         <h2>Design</h2>
-                        <p>While I was contracted at Travelers, I worked on their #ThinkSafe Campaign. I did everything from designs to videos and voice overs for the campaign. Some videos with designs and voice over exampels are <a href="https://vimeo.com/158059770" target="_blank">here</a> and <a href="https://vimeo.com/158059294" target="_blank">here</a>, and below are some design examples:</p>
+                        <p>While I was contracted at Travelers, I worked on their #ThinkSafe Campaign. I did everything from designs to videos and voice overs for the campaign. Some videos with designs and voice over examples are <a href="https://vimeo.com/158059770" target="_blank">here</a> and <a href="https://vimeo.com/158059294" target="_blank">here</a>, and below are some design examples:</p>
                     </div>
                     <DesignSlider/>
                 </div>

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import Slide1 from '../../ui/img/art-slides/timeinatree.JPG';
-import Slide2 from '../../ui/img/art-slides/aliciakeys.JPG';
-import Slide3 from '../../ui/img/art-slides/gd.JPG';
-import Slide4 from '../../ui/img/art-slides/lastnightinaltitude.JPG';
-import Slide5 from '../../ui/img/art-slides/cellouie.JPG';
-import Slide6 from '../../ui/img/art-slides/calvinhobbes.JPG';
-import Slide7 from '../../ui/img/art-slides/headintheclouds.JPG';
-import Slide8 from '../../ui/img/art-slides/2099.jpg';
-import Slide9 from '../../ui/img/art-slides/superman.jpeg';
-import Slide10 from '../../ui/img/art-slides/joker.jpeg';
-import Slide11 from '../../ui/img/art-slides/tiger.jpeg';
-import Slide12 from '../../ui/img/art-slides/lion.jpeg';
+import Slide1 from '../../ui/img/design-slides/thinksafe-1.png';
+import Slide2 from '../../ui/img/design-slides/thinksafe-3.png';
+import Slide3 from '../../ui/img/design-slides/thinksafe-4.png';
+import Slide4 from '../../ui/img/design-slides/thinksafe-5.png';
+import Slide5 from '../../ui/img/design-slides/thinksafe-6.png';
+import Slide6 from '../../ui/img/design-slides/thinksafe-7.png';
+import Slide7 from '../../ui/img/design-slides/thinksafe-8.png';
+import Slide8 from '../../ui/img/design-slides/thinksafe-9.png';
+import Slide9 from '../../ui/img/design-slides/thinksafe-10.png';
+import Slide10 from '../../ui/img/design-slides/thinksafe-11.png';
+import Slide11 from '../../ui/img/design-slides/thinksafe-12.png';
+import Slide12 from '../../ui/img/design-slides/thinksafe-13.png';
 
-class ArtSlider extends Component {
+class DesignSlider extends Component {
     render() {
         const settings = {
             dots: false,
@@ -35,7 +35,7 @@ class ArtSlider extends Component {
         };
 
         return (
-            <div className="art-carousel">
+            <div className="design-carousel">
                 <Slider {...settings}>
                     <div><img src={Slide1}/></div>
                     <div><img src={Slide2}/></div>
@@ -56,4 +56,4 @@ class ArtSlider extends Component {
 }
 
 
-export default ArtSlider;
+export default DesignSlider;

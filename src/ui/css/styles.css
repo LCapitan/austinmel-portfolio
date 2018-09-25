@@ -512,10 +512,14 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow: hidden; }
+  overflow-x: hidden;
+  overflow-y: hidden; }
   @media screen and (max-width: 992px) {
     html, body {
       overflow-y: visible; } }
+
+.let-scroll {
+  overflow-y: scroll; }
 
 .menu-open {
   overflow: hidden; }
@@ -573,17 +577,17 @@ p {
   position: relative;
   width: 100%;
   height: 100%; }
+  .main-content h2 {
+    color: #5f5f5f; }
   .main-content .content {
     text-align: left; }
-    .main-content .content h2 {
-      color: #5f5f5f; }
     .main-content .content .author {
       text-align: right; }
   @media screen and (max-width: 992px) {
-    .main-content .content {
+    .main-content .content, .main-content .content-2 {
       padding: 0 25px; } }
   @media screen and (max-width: 767px) {
-    .main-content .content {
+    .main-content .content, .main-content .content-2 {
       padding: 0 20px;
       margin-bottom: 25px; } }
 
@@ -682,7 +686,7 @@ p {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 75px 1fr auto;
+  grid-template-rows: 75px auto auto;
   overflow-y: visible; }
   .draw .main-content {
     position: relative;
@@ -691,35 +695,58 @@ p {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: auto; }
     .draw .main-content h1 {
-      left: 40%; }
+      top: 10%; }
     .draw .main-content .content {
       grid-column: 2/8;
       grid-row: 1; }
-    .draw .main-content .carousel {
-      grid-column: 9/14;
-      grid-row: 1;
+    .draw .main-content .art-carousel {
+      grid-column: 1/14;
+      grid-row: 2;
       margin-top: 100px;
       position: relative;
       width: 100%; }
-      .draw .main-content .carousel img {
+      .draw .main-content .art-carousel img {
         position: relative;
         width: 100%; }
-      .draw .main-content .carousel .slick-prev {
+      .draw .main-content .art-carousel .slick-prev {
         left: 0;
-        z-index: 999; }
-        .draw .main-content .carousel .slick-prev:before {
+        z-index: 50; }
+        .draw .main-content .art-carousel .slick-prev:before {
           font-size: 50px; }
-      .draw .main-content .carousel .slick-next {
+      .draw .main-content .art-carousel .slick-next {
         right: 30px;
-        z-index: 999; }
-        .draw .main-content .carousel .slick-next:before {
+        z-index: 50; }
+        .draw .main-content .art-carousel .slick-next:before {
+          font-size: 50px; }
+    .draw .main-content .content-2 {
+      text-align: left;
+      grid-column: 2/8;
+      grid-row: 3;
+      margin-bottom: 25px; }
+    .draw .main-content .design-carousel {
+      grid-column: 1/14;
+      grid-row: 4;
+      margin-top: 0;
+      position: relative;
+      width: 100%; }
+      .draw .main-content .design-carousel img {
+        position: relative;
+        width: 100%; }
+      .draw .main-content .design-carousel .slick-prev {
+        left: 0;
+        z-index: 50; }
+        .draw .main-content .design-carousel .slick-prev:before {
+          font-size: 50px; }
+      .draw .main-content .design-carousel .slick-next {
+        right: 30px;
+        z-index: 50; }
+        .draw .main-content .design-carousel .slick-next:before {
           font-size: 50px; }
     .draw .main-content .octo {
-      display: none;
-      grid-column: 10/13;
-      grid-row: 1/2;
-      position: relative;
-      top: 250px; }
+      display: block;
+      grid-column: 9/13;
+      grid-row: 1;
+      position: relative; }
       .draw .main-content .octo img {
         display: inline-block;
         position: relative;
@@ -740,6 +767,9 @@ p {
         left: 65%;
         transform: translateX(-50%);
         animation: octo-shadow 2.5s infinite ease-in-out; }
+  .draw footer .navBtn {
+    position: fixed;
+    bottom: 0; }
   @media screen and (max-width: 992px) {
     .draw {
       display: block; }
@@ -756,14 +786,18 @@ p {
           .draw .main-content .octo:after {
             bottom: 30px;
             left: 75%; }
-        .draw .main-content .carousel {
+        .draw .main-content .art-carousel,
+        .draw .main-content .design-carousel {
           margin-top: 25px;
           margin-bottom: 50px;
           position: relative;
           width: 100%; }
-          .draw .main-content .carousel img {
+          .draw .main-content .art-carousel img,
+          .draw .main-content .design-carousel img {
             position: relative;
-            width: 100%; } }
+            width: 100%; }
+        .draw .main-content .design-carousel {
+          margin-bottom: 0; } }
   @media screen and (max-width: 767px) {
     .draw {
       display: block; }
@@ -780,7 +814,8 @@ p {
           .draw .main-content .octo:after {
             bottom: 30px;
             left: 70%; }
-        .draw .main-content .carousel {
+        .draw .main-content .art-carousel,
+        .draw .main-content .design-carousel {
           margin-top: 0;
           margin-bottom: -8px; } }
 
@@ -1177,7 +1212,8 @@ footer {
   align-items: center;
   height: 75px;
   justify-content: center;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 100; }
   footer .navBtn {
     background: none;
     border: 0;

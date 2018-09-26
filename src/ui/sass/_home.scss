@@ -70,11 +70,17 @@
             }
 
             .astro {
-                top: 45%;
+                top: 40%;
                 left: 50%;
                 margin-left: -100px;
 
-                img { width: 200px; }
+                img { width: 150px; }
+
+                &:after {
+                    width: 65px;
+                    height: 10px;
+                    animation: astro-shadow-mobile 2.5s infinite ease-in-out;
+                }
             }
         }
     }
@@ -90,4 +96,10 @@
     0% {width: 125px; height: 22px; background: darken($white, 5%);}
     50% {width: 100px; height: 18px; background: darken($white, 10%);}
     100% {width: 125px; height: 22px; background: darken($white, 5%);}
+}
+
+@keyframes astro-shadow-mobile {
+    0% {width: 85px; height: 14px; background: darken($white, 5%);}
+    50% {width: 65px; height: 10px; background: darken($white, 10%);}
+    100% {width: 85px; height: 14px; background: darken($white, 5%);}
 }

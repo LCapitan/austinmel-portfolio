@@ -183,6 +183,13 @@
                 margin-bottom: 0;
             }
         }
+
+        footer {
+            .navBtn {
+                position: fixed;
+                bottom: 10px;
+            }
+        }
     }
 
     @media screen and (max-width: 767px) {
@@ -216,6 +223,10 @@
             .design-carousel {
                 margin-top: 0;
                 margin-bottom: -8px;
+            }
+
+            .content-full {
+                margin-top: 58px;
             }
         }
     }

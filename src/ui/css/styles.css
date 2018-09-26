@@ -656,11 +656,15 @@ p {
           font-size: 120px;
           top: 100px; }
         .home .main-content .astro {
-          top: 45%;
+          top: 40%;
           left: 50%;
           margin-left: -100px; }
           .home .main-content .astro img {
-            width: 200px; } }
+            width: 150px; }
+          .home .main-content .astro:after {
+            width: 65px;
+            height: 10px;
+            animation: astro-shadow-mobile 2.5s infinite ease-in-out; } }
 
 @keyframes astro {
   0% {
@@ -681,6 +685,19 @@ p {
   100% {
     width: 125px;
     height: 22px;
+    background: #f2f2f2; } }
+@keyframes astro-shadow-mobile {
+  0% {
+    width: 85px;
+    height: 14px;
+    background: #f2f2f2; }
+  50% {
+    width: 65px;
+    height: 10px;
+    background: #e6e6e6; }
+  100% {
+    width: 85px;
+    height: 14px;
     background: #f2f2f2; } }
 .draw {
   display: grid;
@@ -809,7 +826,10 @@ p {
             position: relative;
             width: 100%; }
         .draw .main-content .design-carousel {
-          margin-bottom: 0; } }
+          margin-bottom: 0; }
+      .draw footer .navBtn {
+        position: fixed;
+        bottom: 10px; } }
   @media screen and (max-width: 767px) {
     .draw {
       display: block; }
@@ -831,7 +851,9 @@ p {
         .draw .main-content .art-carousel,
         .draw .main-content .design-carousel {
           margin-top: 0;
-          margin-bottom: -8px; } }
+          margin-bottom: -8px; }
+        .draw .main-content .content-full {
+          margin-top: 58px; } }
 
 @keyframes octo {
   0% {
@@ -1351,10 +1373,15 @@ nav {
       color: #1e8cc4;
       display: block;
       font-family: "Ubuntu", sans-serif;
-      font-size: 125px;
+      font-size: 180px;
       line-height: 1.2;
-      width: 100%; }
+      width: 100%;
+      transition: .75s ease; }
       nav ul li a:hover, nav ul li a:focus {
-        color: #fff; }
+        color: #fff;
+        transition: .25s ease; }
+  @media screen and (max-width: 767px) {
+    nav ul li a {
+      font-size: 125px; } }
 
 /*# sourceMappingURL=styles.css.map */

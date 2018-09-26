@@ -17,7 +17,6 @@ footer {
         left: 50%;
         bottom: 20px;
         transform: translateX(-50%);
-        transition: .75s ease;
         z-index: 700;
 
         &:before {
@@ -71,7 +70,7 @@ footer {
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        transition: 1s ease;
+        transition: 2s ease;
         z-index: 999;
 
         &:hover,
@@ -86,6 +85,7 @@ footer {
         .navBtn {
             bottom: 110%;
             transition: .75s ease-out;
+            z-index: 9999;
 
             &:after {
                 display: none;
@@ -96,7 +96,7 @@ footer {
             width: 5000px;
             height: 5000px;
             bottom: -150%;
-            transition: 2s ease;
+            transition: 3.5s ease;
         }
 
         nav {
@@ -128,12 +128,15 @@ footer {
             }
         }
 
+        .navBg {
+            transition: 1s ease-out;
+        }
+
         &.navBgOpen {
             .navBtn {
                 bottom: 120%;
                 transition: 1s ease;
             }
-
 
             .navBg {
                 width: 3000px;

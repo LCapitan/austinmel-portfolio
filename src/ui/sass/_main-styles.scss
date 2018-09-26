@@ -29,7 +29,7 @@ a {
 p {
     color: $dark-gray;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.8;
     font-weight: 300;
     margin: 0;
     padding: 10px 0;
@@ -97,14 +97,14 @@ p {
 
     @media screen and (max-width: 992px) {
 
-        .content, .content-2 {
+        .content, .content-full {
             padding: 0 25px;
         }
     }
 
     @media screen and (max-width: 767px) {
 
-        .content, .content-2 {
+        .content, .content-full {
             padding: 0 20px;
             margin-bottom: 25px;
         }

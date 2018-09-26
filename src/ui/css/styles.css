@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Slider */
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif:700|Open+Sans:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:700|Open+Sans:300,400,600,700|Merriweather:300,400,700|Ubuntu:400,700|Lusitana:700");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 .slick-slider {
   position: relative;
@@ -534,7 +534,7 @@ a {
 p {
   color: #5f5f5f;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.8;
   font-weight: 300;
   margin: 0;
   padding: 10px 0; }
@@ -549,7 +549,7 @@ p {
   text-align: center; }
   .default h1 {
     color: #f2f2f2;
-    font-family: "Noto Serif", serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 28em;
     font-weight: 700;
     line-height: 1;
@@ -584,10 +584,10 @@ p {
     .main-content .content .author {
       text-align: right; }
   @media screen and (max-width: 992px) {
-    .main-content .content, .main-content .content-2 {
+    .main-content .content, .main-content .content-full {
       padding: 0 25px; } }
   @media screen and (max-width: 767px) {
-    .main-content .content, .main-content .content-2 {
+    .main-content .content, .main-content .content-full {
       padding: 0 20px;
       margin-bottom: 25px; } }
 
@@ -697,7 +697,7 @@ p {
     .draw .main-content h1 {
       top: 10%; }
     .draw .main-content .content {
-      grid-column: 2/8;
+      grid-column: 2/9;
       grid-row: 1; }
     .draw .main-content .art-carousel {
       grid-column: 1/14;
@@ -709,18 +709,24 @@ p {
         position: relative;
         width: 100%; }
       .draw .main-content .art-carousel .slick-prev {
+        width: 50px;
+        height: 100%;
         left: 0;
         z-index: 50; }
         .draw .main-content .art-carousel .slick-prev:before {
+          color: #858585;
           font-size: 50px; }
       .draw .main-content .art-carousel .slick-next {
-        right: 30px;
+        width: 50px;
+        height: 100%;
+        right: 0;
         z-index: 50; }
         .draw .main-content .art-carousel .slick-next:before {
+          color: #858585;
           font-size: 50px; }
-    .draw .main-content .content-2 {
+    .draw .main-content .content-full {
       text-align: left;
-      grid-column: 2/8;
+      grid-column: 2/13;
       grid-row: 3;
       margin: 25px 0 50px; }
     .draw .main-content .design-carousel {
@@ -733,18 +739,22 @@ p {
         position: relative;
         width: 100%; }
       .draw .main-content .design-carousel .slick-prev {
+        width: 50px;
+        height: 100%;
         left: 0;
         z-index: 50; }
         .draw .main-content .design-carousel .slick-prev:before {
           font-size: 50px; }
       .draw .main-content .design-carousel .slick-next {
-        right: 30px;
+        width: 50px;
+        height: 100%;
+        right: 0;
         z-index: 50; }
         .draw .main-content .design-carousel .slick-next:before {
           font-size: 50px; }
     .draw .main-content .octo {
       display: block;
-      grid-column: 9/13;
+      grid-column: 10/13;
       grid-row: 1;
       position: relative; }
       .draw .main-content .octo img {
@@ -775,6 +785,8 @@ p {
       display: block; }
       .draw .main-content {
         display: block; }
+        .draw .main-content h1 {
+          top: 50px; }
         .draw .main-content .octo {
           display: block;
           top: 85px;
@@ -803,6 +815,8 @@ p {
       display: block; }
       .draw .main-content {
         display: block; }
+        .draw .main-content h1 {
+          top: 0; }
         .draw .main-content .octo {
           display: block;
           top: 85px;
@@ -854,7 +868,7 @@ p {
       grid-column: 2/9;
       grid-row: 1; }
     .develop .main-content .astro-play {
-      grid-column: 9/13;
+      grid-column: 10/13;
       grid-row: 1;
       display: block;
       position: relative;
@@ -1032,7 +1046,7 @@ p {
       grid-row: 1; }
     .about .main-content .balloon {
       display: block;
-      grid-column: 9/13;
+      grid-column: 10/13;
       grid-row: 1;
       position: absolute;
       top: 15%;
@@ -1225,7 +1239,6 @@ footer {
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    transition: .75s ease;
     z-index: 700; }
     footer .navBtn:before {
       filter: grayscale(100%);
@@ -1266,7 +1279,7 @@ footer {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    transition: 1s ease;
+    transition: 2s ease;
     z-index: 999; }
     footer .navBg:hover, footer .navBg:focus {
       cursor: url("../img/cursor-x.png"), auto; }
@@ -1274,14 +1287,15 @@ footer {
     overflow: hidden; }
     footer.navBgOpen .navBtn {
       bottom: 110%;
-      transition: .75s ease-out; }
+      transition: .75s ease-out;
+      z-index: 9999; }
       footer.navBgOpen .navBtn:after {
         display: none; }
     footer.navBgOpen .navBg {
       width: 5000px;
       height: 5000px;
       bottom: -150%;
-      transition: 2s ease; }
+      transition: 3.5s ease; }
     footer.navBgOpen nav {
       opacity: 1;
       visibility: visible;
@@ -1302,6 +1316,8 @@ footer {
           transition: .75s ease-out; }
         footer .navBtn:after {
           display: none; }
+      footer .navBg {
+        transition: 1s ease-out; }
       footer.navBgOpen .navBtn {
         bottom: 120%;
         transition: 1s ease; }
@@ -1334,7 +1350,7 @@ nav {
     nav ul li a {
       color: #1e8cc4;
       display: block;
-      font-family: "Noto Serif", serif;
+      font-family: "Ubuntu", sans-serif;
       font-size: 125px;
       line-height: 1.2;
       width: 100%; }

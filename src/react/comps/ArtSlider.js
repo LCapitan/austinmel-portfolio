@@ -16,7 +16,7 @@ class ArtSlider extends Component {
             dots: false,
             infinite: true,
             speed: 500,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 4000,
             slidesToShow: 3,
             slidesToScroll: 1,

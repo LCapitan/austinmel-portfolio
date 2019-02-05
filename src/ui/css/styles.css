@@ -202,6 +202,17 @@
       color: black;
       opacity: 0.75; }
 
+.icon-rocket:before {
+  content: url("../img/rocket.svg");
+  display: inline-block; }
+@media screen and (max-width: 767px) {
+  .icon-rocket:before {
+    content: url("../img/rocket-white.svg"); } }
+
+.icon-astro:before {
+  content: url("../img/about.svg");
+  display: inline-block; }
+
 @font-face {
   font-family: 'devicon';
   src: url("../fonts/devicon.eot?-hdf3wh");
@@ -495,17 +506,6 @@
 .devicon-atom-original:before,
 .devicon-atom-plain:before {
   content: "\e624"; }
-
-.icon-rocket:before {
-  content: url("../img/rocket.svg");
-  display: inline-block; }
-@media screen and (max-width: 767px) {
-  .icon-rocket:before {
-    content: url("../img/rocket-white.svg"); } }
-
-.icon-astro:before {
-  content: url("../img/about.svg");
-  display: inline-block; }
 
 html, body {
   font-family: "Open Sans", sans-serif;
@@ -1264,8 +1264,8 @@ footer {
     z-index: 700; }
     footer .navBtn:before {
       filter: grayscale(100%);
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       transition: 1s ease;
       z-index: 999;
       transform: rotate(45deg); }
@@ -1330,7 +1330,7 @@ footer {
       overflow: hidden; }
       footer .navBtn {
         position: fixed;
-        bottom: 10px;
+        bottom: 5px;
         transition: .75s ease-out; }
         footer .navBtn:before {
           width: 45px;

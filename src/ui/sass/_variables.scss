@@ -9,7 +9,6 @@ $font-title: 'Ubuntu', sans-serif;
 //$font-title: 'Lusitana', serif;
 
 
-
 // Colors
 
 $black: #000;
@@ -21,6 +20,27 @@ $blue: #2ba3df;
 $pink: #ff376f;
 $green: #00ed83;
 
+// Rocket Button
+
+.icon-rocket {
+    &:before {
+        content: url('../img/rocket.svg');
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 767px) {
+        &:before {
+            content: url('../img/rocket-white.svg');
+        }
+    }
+}
+
+.icon-astro {
+    &:before {
+        content: url('../img/about.svg');
+        display: inline-block;
+    }
+}
 
 // Icons
 
@@ -408,27 +428,6 @@ $green: #00ed83;
 .devicon-atom-original:before,
 .devicon-atom-plain:before {
     content: "\e624";
-}
-
-
-.icon-rocket {
-    &:before {
-        content: url('../img/rocket.svg');
-        display: inline-block;
-    }
-
-    @media screen and (max-width: 767px) {
-        &:before {
-            content: url('../img/rocket-white.svg');
-        }
-    }
-}
-
-.icon-astro {
-    &:before {
-        content: url('../img/about.svg');
-        display: inline-block;
-    }
 }
 
 

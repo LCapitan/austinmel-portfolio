@@ -9,12 +9,6 @@ import design6 from '../../ui/img/art-slides/calvinhobbes.JPG';
 import design7 from '../../ui/img/art-slides/headintheclouds.JPG';
 import design8 from '../../ui/img/art-slides/astro-space.jpg';
 import design9 from '../../ui/img/art-slides/fly.jpg';
-import design10 from '../../ui/img/design-slides/thinksafe-1.png';
-import design11 from '../../ui/img/design-slides/thinksafe-3.png';
-import design12 from '../../ui/img/design-slides/thinksafe-4.png';
-import design13 from '../../ui/img/design-slides/thinksafe-6.png';
-import design14 from '../../ui/img/design-slides/thinksafe-8.png';
-import design15 from '../../ui/img/design-slides/thinksafe-9.png';
 
 class DesignSlider extends Component {
     render() {
@@ -22,7 +16,7 @@ class DesignSlider extends Component {
             dots: false,
             infinite: true,
             speed: 500,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 4000,
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -49,12 +43,6 @@ class DesignSlider extends Component {
                     <div><img src={design7}/></div>
                     <div><img src={design8}/></div>
                     <div><img src={design9}/></div>
-                    <div><img src={design10}/></div>
-                    <div><img src={design11}/></div>
-                    <div><img src={design12}/></div>
-                    <div><img src={design13}/></div>
-                    <div><img src={design14}/></div>
-                    <div><img src={design15}/></div>
                 </Slider>
             </div>
         );
